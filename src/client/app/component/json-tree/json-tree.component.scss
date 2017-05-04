@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  &[hidden] {
+    display: none;
+  }
+}
+.key {
+  display: inline-block;
+  vertical-align: top;
+}
+.value {
+  border: 1px solid #1f253d;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 4px;
+  display: inline-block;
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .expand {
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

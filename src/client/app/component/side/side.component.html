@@ -1,0 +1,9 @@
+<div class="panel profile">
+  <h2>User Profile</h2>
+  <div class="avatar" *ngIf="!!user">
+    <img *ngIf="user" [src]="'/res/img/user/' + user.username + '.jpg'" alt="" class="photo">
+    <br>
+    <!--<label>{{user ? (user.name || user.username) : ''}}</label>-->
+  </div>
+  <app-login></app-login>
+</div>

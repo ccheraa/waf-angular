@@ -1,0 +1,20 @@
+<div *ngIf="!token">
+  <div class="form" *ngIf="!registering">
+    <input type="text" placeholder="Username" [(ngModel)]="form.username" >
+    <input type="password" placeholder="Password" [(ngModel)]="form.password" >
+    <button (click)="login()" [disabled]="loading">Login</button>
+    <button (click)="form.username = form.password = ''" [disabled]="loading">Reset</button>
+    <label><a (click)="registering = true">Don't have an account?</a></label>
+  </div>
+  <div class="form" *ngIf="registering">
+    <input type="text" placeholder="Username" [(ngModel)]="form.username" >
+    <input type="password" placeholder="Password" [(ngModel)]="form.password" >
+    <button (click)="register()" [disabled]="loading">Register</button>
+    <button (click)="form.username = form.password = ''" [disabled]="loading">Reset</button>
+    <label><a (click)="registering = false">Have an account?</a></label>
+  </div>
+</div>
+<div class="form" *ngIf="!!token">
+  <label>Logged as: <b>{{user.name}}</b></label>
+  <button (click)="logout()" [disabled]="loading">Log out</button>
+</div>

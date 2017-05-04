@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./grid.scss";
+@import "./form.scss";
+@import "./panel.scss";
+body {
+  background: #1f253d;
+  color: #8a93b1;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+* {
+  color: inherit;
+  font: inherit;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+pre {
+  font-family: monospace;
+  overflow-x: auto;
+}

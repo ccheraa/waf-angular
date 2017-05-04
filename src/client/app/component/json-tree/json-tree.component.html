@@ -1,0 +1,8 @@
+<div class="key" *ngIf="key">{{key}}: </div>
+<div class="value" [ngSwitch]="itemType()">
+  <div *ngSwitchCase="'single'">{{item|json}}</div>
+  <div *ngSwitchCase="'object'">
+    <div class="expand" (click)="expanded=!expanded"><b>(...)</b></div>
+    <app-json-tree [hidden]="!expanded" *ngFor="let key of loop" [item]="item[key]" [key]="key"></app-json-tree>
+  </div>
+</div>

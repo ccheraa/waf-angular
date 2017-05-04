@@ -1,0 +1,13 @@
+.panel {
+  background-color: #394264;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  >h2:first-child {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 24px 0;
+  }
+}
